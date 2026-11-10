@@ -1,5 +1,13 @@
 function createNewTask(e) {
   e.preventDefault();
+
+  const taskTitle = document.getElementById("task-title");
+  taskTitleValue = taskTitle.value.trim();
+  console.log(taskTitleValue)
+  //This stops the program from creating a task with no title
+  if (taskTitleValue.length == 0) {
+    return;
+  }
   //All the elements that will be added when a task is added
   const listItemDiv = document.getElementById("task_list");
   //The div that holds both divs
@@ -53,10 +61,9 @@ function createNewTask(e) {
   //Making the delete button delete the div
   deleteButton.addEventListener("click", (e) => taskContainer.remove());
   radioDoneButton.addEventListener("click", (e) => {
-    if (taskHeaders.classList.contains("finished")){
+    if (taskHeaders.classList.contains("finished")) {
       taskHeaders.classList.remove("finished");
-    }
-    else{
+    } else {
       taskHeaders.classList.add("finished");
     }
   });
@@ -67,6 +74,6 @@ const addTaskButton = document.getElementById("add-btn");
 addTaskButton.addEventListener("click", createNewTask);
 
 /*To-do list
-1. Fix the spacing on each class
+1. Don't allow the user to crate a task with no description
 2. Submit the project
 */
