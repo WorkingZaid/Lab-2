@@ -1,13 +1,88 @@
+/*
+
+===========================================================================
+
+🏛️ SCIT Web Programming - AI DISCLOSURE BLOCK
+
+===========================================================================
+
+File Name:      [script.js]
+
+Student Name:   [Zaid Burrell]
+
+Student ID:     [2505162]
+
+Assignment:     [Lab #2 - Interactive Task Manager]
+
+Date:           [10/11/2026]
+
+ 
+
+-----------------------------------------------------------------------------
+
+🤖 GENERIC AI TOOL UTILISED (Check all that apply):
+
+[ ] GitHub Copilot     [ ] ChatGPT     [ ] Claude     [ ] Gemini     [X] None
+
+-----------------------------------------------------------------------------
+
+ 
+
+📝 SCOPE OF WORK & DEBUGGING LOG:
+
+1. Specific Bug/Error Encountered:
+
+   [Paste compiler error or describe the runtime logic bug you faced]
+
+ 
+
+2. Exact Prompt Sent to AI Tool:
+
+   "[Paste the exact text prompt you fed to the AI engine here]"
+
+ 
+
+3. Resolution/Fix Applied:
+
+   [Briefly explain what structural syntax or comment changes you made based
+
+    on the AI feedback. Do not paste massive code blocks here.]
+
+ 
+
+-----------------------------------------------------------------------------
+
+⚠️ INTEGRITY VERIFICATION DECLARATION:
+
+By submitting this file, I certify that the core algorithmic logic, program
+
+architecture, and data structures implemented herein are entirely my own
+
+authentic work. AI assistance was restricted strictly to debugging and/or
+
+generating explanatory documentation comments in full compliance with the
+
+course syllabus.
+
+ 
+
+Student Electronic Signature: Z.Burrell
+
+===========================================================================
+
+*/
+
 function createNewTask(e) {
   e.preventDefault();
 
   const taskTitle = document.getElementById("task-title");
   taskTitleValue = taskTitle.value.trim();
-  console.log(taskTitleValue)
+  console.log(taskTitleValue);
   //This stops the program from creating a task with no title
   if (taskTitleValue.length == 0) {
     return;
   }
+
   //All the elements that will be added when a task is added
   const listItemDiv = document.getElementById("task_list");
   //The div that holds both divs
@@ -72,8 +147,3 @@ function createNewTask(e) {
 const addTaskButton = document.getElementById("add-btn");
 
 addTaskButton.addEventListener("click", createNewTask);
-
-/*To-do list
-1. Don't allow the user to crate a task with no description
-2. Submit the project
-*/

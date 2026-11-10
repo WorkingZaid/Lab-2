@@ -1,3 +1,76 @@
+/*text
+
+===========================================================================
+
+🏛️ SCIT Web Programming - AI DISCLOSURE BLOCK
+
+===========================================================================
+
+File Name:      [style.css]
+
+Student Name:   [Zaid Burrell]
+
+Student ID:     [2505162]
+
+Assignment:     [Lab #2 - Interactive Task Manager]
+
+Date:           [10/11/2026]
+
+ 
+
+-----------------------------------------------------------------------------
+
+🤖 GENERIC AI TOOL UTILISED (Check all that apply):
+
+[ ] GitHub Copilot     [ ] ChatGPT     [ ] Claude     [ ] Gemini     [X] None
+
+-----------------------------------------------------------------------------
+
+ 
+
+📝 SCOPE OF WORK & DEBUGGING LOG:
+
+1. Specific Bug/Error Encountered:
+
+   [Paste compiler error or describe the runtime logic bug you faced]
+
+ 
+
+2. Exact Prompt Sent to AI Tool:
+
+   "[Paste the exact text prompt you fed to the AI engine here]"
+
+ 
+
+3. Resolution/Fix Applied:
+
+   [Briefly explain what structural syntax or comment changes you made based
+
+    on the AI feedback. Do not paste massive code blocks here.]
+
+ 
+
+-----------------------------------------------------------------------------
+
+⚠️ INTEGRITY VERIFICATION DECLARATION:
+
+By submitting this file, I certify that the core algorithmic logic, program
+
+architecture, and data structures implemented herein are entirely my own
+
+authentic work. AI assistance was restricted strictly to debugging and/or
+
+generating explanatory documentation comments in full compliance with the
+
+course syllabus.
+
+ 
+
+Student Electronic Signature: Z.Burrell
+
+===========================================================================
+
+*/
 /* Global Reset & Theme Variables */
 :root {
     --bg-color: #f4f7f6;
@@ -170,16 +243,19 @@ button:hover {
 .flex1 {
     align-items: flex-start;
 }
-.flex1 h2{
+
+.flex1 h2 {
     margin: 0px;
     padding: 0px;
 }
-#doneCheckbox{
+
+#doneCheckbox {
     width: 20px;
     height: 20px;
     border-radius: 20px;
     accent-color: var(--primary-color);
 }
-.flex1 h2.finished{
+
+.flex1 h2.finished {
     text-decoration: line-through;
 }
