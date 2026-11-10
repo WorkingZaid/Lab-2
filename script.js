@@ -48,10 +48,18 @@ function createNewTask(e) {
   deleteButton.innerText = "Delete";
   deleteButton.classList.add("delete-btn");
   taskContainer.append(div2);
-
+  radioDoneButton.id = "doneCheckbox";
   radioDoneButton.type = "checkbox";
   //Making the delete button delete the div
   deleteButton.addEventListener("click", (e) => taskContainer.remove());
+  radioDoneButton.addEventListener("click", (e) => {
+    if (taskHeaders.classList.contains("finished")){
+      taskHeaders.classList.remove("finished");
+    }
+    else{
+      taskHeaders.classList.add("finished");
+    }
+  });
 }
 
 const addTaskButton = document.getElementById("add-btn");
@@ -59,7 +67,6 @@ const addTaskButton = document.getElementById("add-btn");
 addTaskButton.addEventListener("click", createNewTask);
 
 /*To-do list
-1. Make it delete when you press the button
-2. Fix the spacing on each class
-3. Submit the project
+1. Fix the spacing on each class
+2. Submit the project
 */
