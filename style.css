@@ -113,6 +113,8 @@ button:hover {
     align-items: center;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
     border-left: 5px solid transparent;
+    row-gap: 200px;
+    margin: 8px;
 }
 
 /* Border modifiers based on dataset priority traits */
@@ -142,6 +144,8 @@ button:hover {
 
 .delete-btn {
     background-color: var(--high-priority);
+    justify-self: flex-end;
+    padding: 10px;
 }
 
 .delete-btn:hover {
@@ -154,4 +158,20 @@ button:hover {
 
 .toggle-btn:hover {
     background-color: #27ae60;
+}
+
+.flex1,
+.flex2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    justify-content: center;
+}
+
+.flex1 {
+    align-items: flex-start;
+}
+.flex2{
+    height: 100%;
 }

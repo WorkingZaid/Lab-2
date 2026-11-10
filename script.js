@@ -1,4 +1,5 @@
-function createNewTask() {
+function createNewTask(e) {
+  e.preventDefault();
   //All the elements that will be added when a task is added
   const listItemDiv = document.getElementById("task_list");
   //The div that holds both divs
@@ -8,7 +9,6 @@ function createNewTask() {
   const div1 = document.createElement("div");
   const taskHeaders = document.createElement("h2");
   const radioDoneButton = document.createElement("input");
-  const divider = document.createElement("hr");
 
   //Second flex div
   const div2 = document.createElement("div");
@@ -17,21 +17,49 @@ function createNewTask() {
 
   //Getting the elements that will be used to take the text content out of
   const taskInput = document.getElementById("task-title");
-  const proritySelection = document.getElementById("task-priority");
+  const prioritySelection = document.getElementById("task-priority");
+
+  //Getting the text content from both different intputs and putting using them for the display
+  taskHeaders.innerText = taskInput.value;
+  priorityDescription.innerText = prioritySelection.value;
 
   //Appending them to the div that will hold all the content of the task
-
   listItemDiv.append(taskContainer);
-  taskContainer.classList.add("taskContainer");
-  div1.append(taskHeaders);
-  div1.append(radioDoneButton);
-  div1.append(divider);
+  taskContainer.classList.add("task-item");
+  if (prioritySelection.value == "Low Priority") {
+    taskContainer.classList.add("low");
+  } else if (prioritySelection.value == "Medium Priority") {
+    taskContainer.classList.add("medium");
+  } else if (prioritySelection.value == "High Priority") {
+    taskContainer.classList.add("high");
+  }
+  //Div 1
   taskContainer.append(div1);
-  div2.append(priorityDescription);
+  div1.append(taskHeaders);
+  div1.append(priorityDescription);
+
+  div1.classList.add("flex1");
+
+  //Div 2
+
+  div2.append(radioDoneButton);
+  div2.classList.add("flex2");
   div2.append(deleteButton);
+  deleteButton.innerText = "Delete";
+  deleteButton.classList.add("delete-btn");
   taskContainer.append(div2);
 
   radioDoneButton.type = "checkbox";
+  //Making the delete button delete the div
+  deleteButton.addEventListener("click", (e) => taskContainer.remove());
 }
 
-createNewTask();
+const addTaskButton = document.getElementById("add-btn");
+
+addTaskButton.addEventListener("click", createNewTask);
+
+/*To-do list
+1. Make it delete when you press the button
+2. Fix the spacing on each class
+3. Submit the project
+*/
